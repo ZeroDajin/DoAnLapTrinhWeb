@@ -58,11 +58,11 @@ namespace DoAnWebTruyenTranh
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "255498892429-h444jbdb26ub7u7eo4su9ijou7d6bpch.apps.googleusercontent.com",
+                ClientSecret = "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"
+            });
         }
     }
 }

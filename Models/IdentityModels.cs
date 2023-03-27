@@ -21,7 +21,7 @@ namespace DoAnWebTruyenTranh.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("DoAnLapTrinhWeb", throwIfV1Schema: false)
         {
         }
 
