@@ -9,7 +9,7 @@ namespace DoAnWebTruyenTranh.Models
     {
         public string IDManga { get; set; }
         public string IDChapter { get; set; }
-        public string IDImage { get; set; }
         public string Image { get; set; }
+        public int Sequence { get; set; }
     }
 }
