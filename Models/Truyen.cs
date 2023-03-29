@@ -16,6 +16,5 @@ namespace DoAnWebTruyenTranh.Models
         public string Thumbnail { get; set; }
         public int IDTheLoai { get; set; }
         public string Author { get; set; }
-        IEnumerable<>
     }
 }

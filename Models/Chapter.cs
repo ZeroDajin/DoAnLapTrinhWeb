@@ -12,6 +12,5 @@ namespace DoAnWebTruyenTranh.Models
         [Required]
         public int IDChapter { get; set; }
         public string IDManga { get; set; }
-        public string Images { get; set; }
     }
 }
