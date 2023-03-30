@@ -10,9 +10,10 @@ namespace DoAnWebTruyenTranh.Models
     public class Truyen
     {
         [Required]
+        [Key]
         public string IDManga { get; set; }
         [Required]
-        public string AnotherName { get; set; }
+        public string Name { get; set; }
         [Required]
         public string Thumbnail { get; set; }
         [ForeignKey("TheLoai")]
