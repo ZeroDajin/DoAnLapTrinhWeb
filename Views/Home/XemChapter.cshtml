@@ -1,0 +1,15 @@
+﻿@model IEnumerable<DoAnWebTruyenTranh.Models.Trang>
+@{
+    ViewBag.Title = "XemChapter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Xem Chapter</h2>
+@foreach(var item in Model)
+            {
+                <div class="row">
+                    <img src="/@item.Image" alt="@item.TSequence"/>
+                </div>
+            }
+@* nếu muốn làm 1-image-1-page thì sử dụng TSequence để di chuyển và điều kiện 
+    dựa vào IDChapter *@
