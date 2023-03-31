@@ -178,6 +178,18 @@
     <Compile Include="Migrations\202303271535056_InitialModel.designer.cs">
       <DependentUpon>202303271535056_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303300707367_TruyenTranh.cs" />
+    <Compile Include="Migrations\202303300707367_TruyenTranh.designer.cs">
+      <DependentUpon>202303300707367_TruyenTranh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303300738007_TruyenTranh1.cs" />
+    <Compile Include="Migrations\202303300738007_TruyenTranh1.designer.cs">
+      <DependentUpon>202303300738007_TruyenTranh1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303300740167_PopulateAllTruyenValues1.cs" />
+    <Compile Include="Migrations\202303300740167_PopulateAllTruyenValues1.designer.cs">
+      <DependentUpon>202303300740167_PopulateAllTruyenValues1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -225,7 +237,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -246,9 +257,13 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\XemTruyen.cshtml" />
+    <Content Include="Views\Home\XemChapter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="DBForMangas\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -266,6 +281,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202303271535056_InitialModel.resx">
       <DependentUpon>202303271535056_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303300707367_TruyenTranh.resx">
+      <DependentUpon>202303300707367_TruyenTranh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303300738007_TruyenTranh1.resx">
+      <DependentUpon>202303300738007_TruyenTranh1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303300740167_PopulateAllTruyenValues1.resx">
+      <DependentUpon>202303300740167_PopulateAllTruyenValues1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
