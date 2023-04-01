@@ -1,15 +1,42 @@
-﻿@model IEnumerable<DoAnWebTruyenTranh.Models.Trang>
+﻿@model DoAnWebTruyenTranh.Models.ChapterViewModel
 @{
     ViewBag.Title = "XemChapter";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Xem Chapter</h2>
-@foreach(var item in Model)
-            {
-                <div class="row">
-                    <img src="/@item.Image" alt="@item.TSequence"/>
-                </div>
-            }
-@* nếu muốn làm 1-image-1-page thì sử dụng TSequence để di chuyển và điều kiện 
-    dựa vào IDChapter *@
+<div class="row">
+    I WANT TO DIE
+</div>
+<div class="row">
+    @* Previous Button *@
+    @if (Model.CurrentCSequence <= 1)
+    {
+        <a class="PreviousButton" href="@Url.Action("XemTruyen", "Home", new { id = Model.CurrentMangaID })">
+            Previous
+        </a>
+    }
+    else
+    {
+        <a href="@Url.Action("XemChapter", "Home", new {id=Model.Chapters.Where(x=>x.CSequence==Model.CurrentCSequence-1).First().IDChapter})" class="PreviousButton">Next</a>
+    }
+    @*Next Button*@
+    @if (Model.CurrentCSequence >= Model.TotalChapters)
+    {
+        <a class="NextButton" href="@Url.Action("XemTruyen", "Home", new { id = Model.CurrentMangaID })">
+            Previous
+        </a>
+    }
+    else
+    {
+        <a href="@Url.Action("XemChapter", "Home", new {id=Model.Chapters.Where(x=>x.CSequence==Model.CurrentCSequence+1).First().IDChapter})" class="PreviousButton">Next</a>
+    }
+</div>
+@{
+    int i = 1;
+    foreach (var item in Model.Trangs)
+    {
+        <div class="row"> 
+            <img src="/@item.Image" alt="@i"/> 
+        </div>
+        i = i + 1;
+    }
+}

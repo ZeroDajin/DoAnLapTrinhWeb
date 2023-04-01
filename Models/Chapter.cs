@@ -13,13 +13,15 @@ namespace DoAnWebTruyenTranh.Models
         /* mặc dù trang ảnh vẫn cần ID của chapter để so sánh và truy xuất ảnh, sử dụng identity
          * tại chỗ này sẽ hữu dụng hơn do mình đã có sẵn IDChapter khi bấm vào chapter rồi.
         */
-        [Required]
+        
         [Key]
+        [Required]
         public int IDChapter { get; set; }
         [Required]
-        public int CSequence { get; set; }
         [ForeignKey("Truyen")]
-        public string IDManga { get; set; }
+        public int IDManga { get; set; }
+        public DateTime DateTime { get; set; }
+        public int CSequence { get; set; }
         public virtual Truyen Truyen { get; set; }
 
         //public static List<Chapter> GetChapters()

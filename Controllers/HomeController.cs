@@ -18,7 +18,7 @@ namespace DoAnWebTruyenTranh.Controllers
         {
             return View(Truyen.GetTruyens());
         }
-        public ActionResult XemTruyen(string id)
+        public ActionResult XemTruyen(int? id)
         {
             if(id == null)
             {
@@ -38,13 +38,21 @@ namespace DoAnWebTruyenTranh.Controllers
             {
                 return HttpNotFound();
             }
-            var objs = _dbContext.Trangs.ToList();
-            List<Trang> trangs = objs.Where(x => x.IDChapter == id).ToList();
+            Chapter objc = _dbContext.Chapters.Where(x=> x.IDChapter == id).First();
+            var objm = _dbContext.Chapters.Where(x => x.IDManga == objc.IDManga).ToList();
+            ChapterViewModel ChapterDATA = new ChapterViewModel();
+            var objt = _dbContext.Trangs.ToList();
+            List<Trang> trangs = objt.Where(x => x.IDChapter == id).ToList();
+            ChapterDATA.Trangs = trangs;
+            ChapterDATA.Chapters= objm ;
+            ChapterDATA.CurrentMangaID = objc.IDManga;
+            ChapterDATA.CurrentCSequence = objc.CSequence;
+            ChapterDATA.TotalChapters = objm.Count();
             if (trangs == null)
             {
                 return HttpNotFound();
             }
-            return View(trangs);
+            return View(ChapterDATA);
         }
         public ActionResult About()
         {

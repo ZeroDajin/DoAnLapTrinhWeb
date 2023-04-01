@@ -13,7 +13,7 @@ namespace DoAnWebTruyenTranh.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202303300707367_TruyenTranh"; }
+            get { return "202304011200248_TruyenTranh"; }
         }
         
         string IMigrationMetadata.Source
