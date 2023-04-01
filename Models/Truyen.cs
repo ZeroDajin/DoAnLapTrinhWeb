@@ -13,9 +13,10 @@ namespace DoAnWebTruyenTranh.Models
         /* Sẽ cần 1 cái bảng chi tiết dành cho Manga để thể hiện toàn bộ thể loại của nó, tạm
          * thời sẽ chỉ có 1 thể loại.
          */
-        [Required]
+        
         [Key]
-        public string IDManga { get; set; }
+        [Required]
+        public int IDManga { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]

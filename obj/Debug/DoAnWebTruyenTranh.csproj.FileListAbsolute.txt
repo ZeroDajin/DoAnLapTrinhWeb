@@ -108,6 +108,6 @@ E:\Repository\DoAnLapTrinhWeb\obj\Debug\DoAnWebTruyenTranh.dll
 E:\Repository\DoAnLapTrinhWeb\obj\Debug\DoAnWebTruyenTranh.pdb
 E:\Repository\DoAnLapTrinhWeb\obj\Debug\DoAnWebTruyenTranh.Migrations.InitialModel.resources
 E:\Repository\DoAnLapTrinhWeb\obj\Debug\DoAnWebTruyenTranh.csproj.GenerateResource.cache
-E:\Repository\DoAnLapTrinhWeb\obj\Debug\DoAnWebTruyenTranh.Migrations.TruyenTranh.resources
-E:\Repository\DoAnLapTrinhWeb\obj\Debug\DoAnWebTruyenTranh.Migrations.TruyenTranh1.resources
 E:\Repository\DoAnLapTrinhWeb\obj\Debug\DoAnWebTruyenTranh.Migrations.PopulateAllTruyenValues1.resources
+E:\Repository\DoAnLapTrinhWeb\obj\Debug\DoAnWebTruyenTranh.Migrations.TruyenTranh.resources
+E:\Repository\DoAnLapTrinhWeb\bin\ShutterPrism.MVC.FontAwesome.dll

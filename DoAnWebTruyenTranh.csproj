@@ -178,23 +178,20 @@
     <Compile Include="Migrations\202303271535056_InitialModel.designer.cs">
       <DependentUpon>202303271535056_InitialModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202303300707367_TruyenTranh.cs" />
-    <Compile Include="Migrations\202303300707367_TruyenTranh.designer.cs">
-      <DependentUpon>202303300707367_TruyenTranh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202303300738007_TruyenTranh1.cs" />
-    <Compile Include="Migrations\202303300738007_TruyenTranh1.designer.cs">
-      <DependentUpon>202303300738007_TruyenTranh1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202303300740167_PopulateAllTruyenValues1.cs" />
     <Compile Include="Migrations\202303300740167_PopulateAllTruyenValues1.designer.cs">
       <DependentUpon>202303300740167_PopulateAllTruyenValues1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304011200248_TruyenTranh.cs" />
+    <Compile Include="Migrations\202304011200248_TruyenTranh.designer.cs">
+      <DependentUpon>202304011200248_TruyenTranh.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Chapter.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\ChapterViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\TheLoai.cs" />
     <Compile Include="Models\Trang.cs" />
@@ -207,12 +204,20 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\font-awesome.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -282,14 +287,11 @@
     <EmbeddedResource Include="Migrations\202303271535056_InitialModel.resx">
       <DependentUpon>202303271535056_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303300707367_TruyenTranh.resx">
-      <DependentUpon>202303300707367_TruyenTranh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303300738007_TruyenTranh1.resx">
-      <DependentUpon>202303300738007_TruyenTranh1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303300740167_PopulateAllTruyenValues1.resx">
       <DependentUpon>202303300740167_PopulateAllTruyenValues1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304011200248_TruyenTranh.resx">
+      <DependentUpon>202304011200248_TruyenTranh.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
