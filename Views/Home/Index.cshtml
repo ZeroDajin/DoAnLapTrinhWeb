@@ -20,6 +20,15 @@
                         <img alt="Xem Truyen" src="/@item.Thumbnail" />
                     </a>
                 </div>
+                <div class="panel-footer clearfix">
+                    <div class="pull-right">
+                        @Html.ActionLink("Sửa", "SuaTruyen", new { id = item.IDManga }, new { @class = "btn btn-sucess" })
+                    </div>
+                </div>
+                @*@if (Roles.IsUserInRole("Admin"))
+        {
+
+        }*@
             </div>
         </div>
     }
