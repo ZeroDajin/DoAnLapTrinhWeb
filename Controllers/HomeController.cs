@@ -6,6 +6,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 
 namespace DoAnWebTruyenTranh.Controllers
 {
@@ -56,15 +57,15 @@ namespace DoAnWebTruyenTranh.Controllers
             }
             return View(ChapterDATA);
         }
-        public ActionResult SuaTruyen(int id)
-        {
-            if (id == null||id==0)
+            public ActionResult SuaTruyen(int id)
             {
-                return HttpNotFound();
+                if (id == null||id==0)
+                {
+                    return HttpNotFound();
+                }
+                var objc = _dbContext.Chapters.Where(x => x.IDManga == id).ToList();
+                return View(objc);
             }
-            var objc = _dbContext.Chapters.Where(x => x.IDManga == id).ToList();
-            return View(objc);
-        }
         [HttpGet]
         public ActionResult Create(int id)
         {
@@ -100,6 +101,14 @@ namespace DoAnWebTruyenTranh.Controllers
                 };
                 dbContext.Chapters.Add(chapter);
                 dbContext.SaveChanges();
+                var ReferChapter = dbContext.Chapters.Where(x => x.IDManga == newchapter.IDManga).ToList().OrderBy(x=>x.CSequence).Last();
+                var trang = new Trang
+                {
+                    IDChapter = ReferChapter.IDChapter,
+                    TSequence = 1
+                };
+                dbContext.Trangs.Add(trang);
+                dbContext.SaveChanges();
                 return View("SuaTruyen", Chapter.GetChapters());
             }
             else
@@ -109,10 +118,6 @@ namespace DoAnWebTruyenTranh.Controllers
         }
         public ActionResult SuaChapters(int id)
         {
-            if (id == null || id ==0)
-            {
-                return HttpNotFound();
-            }
             ApplicationDbContext dbContext = new ApplicationDbContext();
             var objt = dbContext.Trangs.Where(x => x.IDChapter == id).ToList();
             return View(objt);
@@ -180,12 +185,21 @@ namespace DoAnWebTruyenTranh.Controllers
         public ActionResult DeleteTrang(int id)
         {
             ApplicationDbContext dbContext = new ApplicationDbContext();
+            
             var find = dbContext.Trangs.Where(x => x.IDTrang == id).First();
             if (find == null)
             {
                 return HttpNotFound();
             }
-            return View(find);
+            var countTrangs = dbContext.Trangs.Where(x=> x.IDChapter == find.IDChapter).Count();
+            if (countTrangs > 1)
+            {
+                return View(find);
+            }
+            else
+            {
+                return View("SuaChapters", Trang.GetTrangs(find.IDChapter));
+            }
         }
         [HttpPost]
         public ActionResult DeleteTrang(int id, FormCollection collection)
