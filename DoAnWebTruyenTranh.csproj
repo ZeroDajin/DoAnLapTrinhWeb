@@ -186,6 +186,14 @@
     <Compile Include="Migrations\202304011200248_TruyenTranh.designer.cs">
       <DependentUpon>202304011200248_TruyenTranh.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304020721292_FixDB.cs" />
+    <Compile Include="Migrations\202304020721292_FixDB.designer.cs">
+      <DependentUpon>202304020721292_FixDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304020750238_FixDB1.cs" />
+    <Compile Include="Migrations\202304020750238_FixDB1.designer.cs">
+      <DependentUpon>202304020750238_FixDB1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -193,6 +201,7 @@
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ChapterViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\SuaTruyenViewModel.cs" />
     <Compile Include="Models\TheLoai.cs" />
     <Compile Include="Models\Trang.cs" />
     <Compile Include="Models\Truyen.cs" />
@@ -265,6 +274,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\XemTruyen.cshtml" />
     <Content Include="Views\Home\XemChapter.cshtml" />
+    <Content Include="Views\Home\SuaTruyen.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Home\SuaChapters.cshtml" />
+    <Content Include="Views\Home\CreateTrang.cshtml" />
+    <Content Include="Views\Home\EditTrang.cshtml" />
+    <Content Include="Views\Home\DeleteTrang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -292,6 +307,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304011200248_TruyenTranh.resx">
       <DependentUpon>202304011200248_TruyenTranh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304020721292_FixDB.resx">
+      <DependentUpon>202304020721292_FixDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304020750238_FixDB1.resx">
+      <DependentUpon>202304020750238_FixDB1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -17,6 +17,12 @@ namespace DoAnWebTruyenTranh.Models
         [Required]
         public int IDChapter { get; set; }
         public string Image { get; set; }
+        public int TSequence { get; set; }
         public virtual Chapter Chapter { get; set; }
+        public static List<Trang> GetTrangs(int id)
+        {
+            ApplicationDbContext dbContext = new ApplicationDbContext();
+            return dbContext.Trangs.Where(x=>x.IDChapter==id).ToList();
+        }
     }
 }

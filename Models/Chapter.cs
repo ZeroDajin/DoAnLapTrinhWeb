@@ -20,14 +20,13 @@ namespace DoAnWebTruyenTranh.Models
         [Required]
         [ForeignKey("Truyen")]
         public int IDManga { get; set; }
-        public DateTime DateTime { get; set; }
         public int CSequence { get; set; }
         public virtual Truyen Truyen { get; set; }
 
-        //public static List<Chapter> GetChapters()
-        //{
-        //    ApplicationDbContext dbContext = new ApplicationDbContext();
-        //    return obj;
-        //}
+        public static List<Chapter> GetChapters()
+       {
+            ApplicationDbContext dbContext = new ApplicationDbContext();
+            return dbContext.Chapters.ToList();
+        }
     }
 }
